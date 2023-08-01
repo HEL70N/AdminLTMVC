@@ -5,6 +5,6 @@ class ControladorModelo
     // Metodo que inclue o modelo
     public function ctrModelo()
     {
-        include "views/modelos.php";
+        include "views/modelo.php";
     }
 }
