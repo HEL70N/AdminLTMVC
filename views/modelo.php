@@ -41,18 +41,15 @@
         <?php require "modulos/menu.php"; ?>
 
         <!-- Conteúdo da página -->
-        <div class="content-wrapper">
 
-            <?php
-            if (isset($_GET["pagina"])) {
-                if ($_GET["pagina"] == "usuarios" || $_GET["pagina"] == "usuarios") {
+        <?php
+        if (isset($_GET["pagina"])) {
+            if ($_GET["pagina"] == "usuarios" || $_GET["pagina"] == "niveis") {
 
-                    include "paginas/" . $_GET["pagina"] . ".php";
-                }
+                include "paginas/" . $_GET["pagina"] . ".php";
             }
-            ?>
-
-        </div>
+        }
+        ?>
 
         <!-- Rodapé -->
         <?php require "modulos/footer.php"; ?>

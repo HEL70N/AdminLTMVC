@@ -16,7 +16,7 @@
           <ul class="sidebar-menu" data-widget="tree">
               <li class="header">MENU DE NAVEGAÇÃO</li>
               <li>
-                  <a href="index.php?pagina=usuarios">
+                  <a href="usuarios">
                       <i class="fa fa-user"></i> <span>Usuários</span>
                   </a>
               </li>
