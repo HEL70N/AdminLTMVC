@@ -9,9 +9,8 @@ class mdlUsuarios
         $stmt = Conexao::conectar()->prepare("SELECT * FROM $tabela");
         $stmt->execute();
 
-        return $stmt->fetcAll();
+        return $stmt->fetchAll();
 
-        $stmt->close();
         $stmt = null;
     }
 }

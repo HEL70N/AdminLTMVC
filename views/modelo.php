@@ -1,3 +1,11 @@
+<?php
+
+$usuarios = ctrUsuarios::ctrMostrarUsuarios();
+
+// var_dump($usuarios);
+
+?>
+
 <!DOCTYPE html>
 <html>
 
