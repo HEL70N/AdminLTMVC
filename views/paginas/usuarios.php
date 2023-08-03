@@ -72,7 +72,7 @@
             </div>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group has-feedback" bis_skin_checked="1">
-                    <input type="text" class="form-control" name="nome_perfil" placeholder="Nome" id="">
+                    <input type="text" class="form-control" name="nome_usuarios" placeholder="Nome" id="">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback" bis_skin_checked="1">
@@ -85,24 +85,28 @@
                 </div>
                 <div class="form-group has-feedback" bis_skin_checked="1">
                     <div class="btn btn-default btn-file" bis_skin_checked="1">
-                        <i class="fas fa-paperclip"></i>Ajustar imagem de perfil
-                        <input type="file" name="subirImgPerfil">
+                        <i class="fas fa-paperclip"></i>Ajustar imagem de usuarios
+                        <input type="file" name="subirImgusuarios">
                     </div>
-                    <img class="previsualizarImgPerfil img-fluid py-2" width="200" height="200" alt="">
+                    <img class="previsualizarImgusuarios img-fluid py-2" width="200" height="200" alt="">
                     <p class="help-block small">Dimensões: 480px * 382px | Tamanho Máx: 2MB | Formato: JPG ou PNG</p>
                 </div>
                 <div class="form-group has-feedback">
                     <label>Nível</label>
-                    <select class="form-control" name="cat_user" required>
-                        <?php foreach ($niveis as $ct) { ?>
-                            <option value="<?php echo $ct['id_nivel']; ?>"><?php echo $ct['nome_nivel']; ?></option>
-                        <?php } ?>
+                    <select class="form-control" name="nivel_user" required>
+                        <option value="1">admin</option>
+                        <option value="2">vendedor</option>
                     </select>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Apagar</button>
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
+
+                <?php
+                    $guardarUsuario = new ctrUsuarios();
+                    $guardarUsuario->ctrGuardarUsuarios();
+                ?>
             </form>
         </div>
     </div>
